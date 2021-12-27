@@ -1,8 +1,8 @@
-# package directories
+# Package directories
 node_modules
 jspm_packages
 
-# Serverless directories
+#Serverless directories
 .serverless
 
 #Environment variables
