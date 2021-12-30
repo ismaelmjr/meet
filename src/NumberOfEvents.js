@@ -5,14 +5,21 @@ class NumberOfEvents extends Component {
     numberOfEvents: 16,
   };
 
+  handleChange = (event) => {
+    this.setState({
+      numberOfEvents: event.target.value,
+    });
+  };
+
   render() {
     return (
       <div>
-        <p>Change number of shown events</p>
+        <p className="heading">Change number of shown events</p>
         <input
           type="number"
           value={this.state.numberOfEvents}
           className="newValue"
+          onChange={this.handleChange}
         />
       </div>
     );
