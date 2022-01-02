@@ -12,10 +12,11 @@ describe("<NumberOfEvents unit testing", () => {
     expect(NumberOfEventsWrapper.find(".newValue")).toHaveLength(1);
   });
 
-  test("changes the state of numberOfEvents correctly", () => {
-    const newValue = { target: { value: 16 } };
-    NumberOfEventsWrapper.find(".newValue").simulate("change", newValue);
-    expect(NumberOfEventsWrapper.state("numberOfEvents")).toBe(16);
+  test("render text input correctly from prop", () => {
+    const numberOfEvents = NumberOfEventsWrapper.prop("numberOfEvents");
+    expect(NumberOfEventsWrapper.find(".newValue").prop("value")).toBe(
+      numberOfEvents
+    );
   });
 });
 
