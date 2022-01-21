@@ -41,7 +41,7 @@ describe("Specify number of events", () => {
     browser = await puppeteer.launch();
     page = await browser.newPage();
     await page.goto("http://localhost:3000/");
-    await page.waitForSelector(".NumberOfEvents");
+    await page.waitForSelector(".eventa");
   });
 
   test("Number of events by default", async () => {

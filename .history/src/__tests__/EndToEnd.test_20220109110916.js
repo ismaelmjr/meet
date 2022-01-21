@@ -33,7 +33,7 @@ describe("show/hide an event details", () => {
   });
 });
 
-describe("Specify number of events", () => {
+describe("specify number of events", () => {
   let browser;
   let page;
   beforeAll(async () => {
@@ -44,17 +44,8 @@ describe("Specify number of events", () => {
     await page.waitForSelector(".NumberOfEvents");
   });
 
-  test("Number of events by default", async () => {
+  test("number of events be defa", async () => {
     const numberOfEvents = await page.$(".NumberOfEvents");
-
-    expect(numberOfEvents).toBeDefined();
-  });
-
-  test("When user changes the number of events", async () => {
-    const numberOfEvents = await page.$(".NumberOfEvents");
-    const specificNumber = await page.$(".newValue");
-
-    expect(numberOfEvents).toBeDefined();
-    expect(specificNumber).toBeDefined();
+    expect(numberOfEvents).toBeLessThanOrEqual(16);
   });
 });

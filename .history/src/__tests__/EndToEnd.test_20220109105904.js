@@ -33,28 +33,4 @@ describe("show/hide an event details", () => {
   });
 });
 
-describe("Specify number of events", () => {
-  let browser;
-  let page;
-  beforeAll(async () => {
-    jest.setTimeout(30000);
-    browser = await puppeteer.launch();
-    page = await browser.newPage();
-    await page.goto("http://localhost:3000/");
-    await page.waitForSelector(".NumberOfEvents");
-  });
-
-  test("Number of events by default", async () => {
-    const numberOfEvents = await page.$(".NumberOfEvents");
-
-    expect(numberOfEvents).toBeDefined();
-  });
-
-  test("When user changes the number of events", async () => {
-    const numberOfEvents = await page.$(".NumberOfEvents");
-    const specificNumber = await page.$(".newValue");
-
-    expect(numberOfEvents).toBeDefined();
-    expect(specificNumber).toBeDefined();
-  });
-});
+describe("show/hide an event details", () => { 

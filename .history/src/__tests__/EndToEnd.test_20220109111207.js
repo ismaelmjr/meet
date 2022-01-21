@@ -44,17 +44,8 @@ describe("Specify number of events", () => {
     await page.waitForSelector(".NumberOfEvents");
   });
 
-  test("Number of events by default", async () => {
+  test("Number of events omponent by default", async () => {
     const numberOfEvents = await page.$(".NumberOfEvents");
-
-    expect(numberOfEvents).toBeDefined();
-  });
-
-  test("When user changes the number of events", async () => {
-    const numberOfEvents = await page.$(".NumberOfEvents");
-    const specificNumber = await page.$(".newValue");
-
-    expect(numberOfEvents).toBeDefined();
-    expect(specificNumber).toBeDefined();
+    expect(numberOfEvents).toBeLessThanOrEqual(16);
   });
 });

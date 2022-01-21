@@ -47,7 +47,7 @@ describe("Specify number of events", () => {
   test("Number of events by default", async () => {
     const numberOfEvents = await page.$(".NumberOfEvents");
 
-    expect(numberOfEvents).toBeDefined();
+    expect(numberOfEvents).toBen();
   });
 
   test("When user changes the number of events", async () => {
